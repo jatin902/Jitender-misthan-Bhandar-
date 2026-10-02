@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>जितेंद्र मिष्टान भंडार | सुल्ताना</title>
+<meta name="description" content="जितेंद्र मिष्टान भंडार, सुल्ताना, चिड़ावा, झुंझुनू — मिठाई, समोसा और कचौरी के लिए संपर्क करें।">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#fffaf3;color:#3b2415}
+header{background:linear-gradient(135deg,#7a210f,#c65b20);color:white;padding:42px 20px;text-align:center}
+.logo{font-size:48px}.tag{font-size:15px;opacity:.9}.wrap{max-width:900px;margin:auto;padding:24px 16px}
+h2{color:#8d2e16}.hero{background:#fff;border-radius:22px;padding:24px;margin-top:-28px;position:relative;box-shadow:0 8px 25px #0001}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;border:1px solid #f0dfcc;border-radius:18px;padding:18px;box-shadow:0 4px 15px #0000000a}
+.emoji{font-size:38px}.price{font-weight:700;color:#9b3217}.btn{display:block;text-align:center;padding:14px;border-radius:12px;text-decoration:none;font-weight:700;margin-top:12px}
+.call{background:#1d7a3a;color:white}.wa{background:#159447;color:white}
+form{background:white;padding:20px;border-radius:18px;border:1px solid #f0dfcc}
+input,textarea,select{width:100%;padding:13px;margin:7px 0 12px;border:1px solid #dcc9b5;border-radius:10px;font-size:16px}
+button{width:100%;border:0;padding:14px;border-radius:12px;background:#9b3217;color:white;font-size:17px;font-weight:700}
+.note{font-size:13px;color:#725d4d}.loc{background:#fff0dd;border-radius:15px;padding:16px}
+footer{text-align:center;padding:28px;color:#725d4d}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🍬</div>
+  <h1>जितेंद्र मिष्टान भंडार</h1>
+  <div class="tag">मिठास और स्वाद — सुल्ताना की अपनी मिठाई की दुकान</div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+<h2>स्वागत है 🙏</h2>
+<p>ताज़ी मिठाइयों, गरमागरम समोसों और स्वादिष्ट कचौरियों के लिए <b>जितेंद्र मिष्टान भंडार</b> से संपर्क करें।</p>
+<a class="btn call" href="tel:+919913400028">📞 अभी कॉल करें</a>
+<a class="btn wa" href="https://wa.me/919913400028?text=नमस्ते%20जितेंद्र%20मिष्टान%20भंडार%2C%20मुझे%20ऑर्डर%20करना%20है।">💬 WhatsApp पर ऑर्डर करें</a>
+</section>
+
+<h2>हमारे लोकप्रिय आइटम</h2>
+<div class="grid">
+<div class="card"><div class="emoji">🍬</div><h3>मिठाइयाँ</h3><p>त्योहार और रोज़मर्रा के लिए स्वादिष्ट भारतीय मिठाइयाँ।</p><div class="price">आज का भाव दुकान पर पूछें</div></div>
+<div class="card"><div class="emoji">🥟</div><h3>समोसा</h3><p>गरमागरम, कुरकुरा और मसालेदार समोसा।</p><div class="price">ताज़ा तैयार</div></div>
+<div class="card"><div class="emoji">🥮</div><h3>कचौरी</h3><p>खस्ता कचौरी, चाय के साथ एकदम बढ़िया।</p><div class="price">ताज़ा तैयार</div></div>
+</div>
+
+<h2>📲 फोन से ऑर्डर</h2>
+<form onsubmit="sendOrder(event)">
+<label>आपका नाम</label><input id="name" required placeholder="नाम">
+<label>क्या ऑर्डर करना है?</label><input id="item" required placeholder="जैसे: 10 समोसे, 1 kg मिठाई">
+<label>पता / डिलीवरी जानकारी</label><textarea id="address" rows="3" placeholder="यदि लागू हो"></textarea>
+<button type="submit">WhatsApp पर Order भेजें</button>
+<p class="note">बटन दबाने पर WhatsApp खुलेगा और आपका order message दुकान के नंबर पर तैयार हो जाएगा। Order स्वीकार/पुष्टि दुकान वाला WhatsApp पर करेगा।</p>
+</form>
+
+<h2>📍 दुकान का पता</h2>
+<div class="loc"><b>जितेंद्र मिष्टान भंडार</b><br>Sultana, Tehsil Chirawa, District Jhunjhunu, Rajasthan, India<br><br>📞 <a href="tel:+919913400028">9913400028</a></div>
+</main>
+
+<footer>© 2026 जितेंद्र मिष्टान भंडार • Sultana, Jhunjhunu</footer>
+
+<script>
+function sendOrder(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value.trim();
+ const i=document.getElementById('item').value.trim();
+ const a=document.getElementById('address').value.trim();
+ const msg=`नमस्ते जितेंद्र मिष्टान भंडार!%0A%0Aनाम: ${encodeURIComponent(n)}%0Aऑर्डर: ${encodeURIComponent(i)}%0Aपता/जानकारी: ${encodeURIComponent(a || 'नहीं दिया')}`;
+ location.href='https://wa.me/919913400028?text='+msg;
+}
+</script>
+</body>
+</html>
